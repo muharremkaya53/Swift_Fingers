@@ -1,0 +1,26 @@
+@startuml SwiftFingers
+
+class TypingApp {
+    - ui: Tk
+    - typingTest: TypingTest
+    - userInputWidget: Entry
+    - statsLabelWidget: Label
+    - timerLabelWidget: Label
+    - remainingTime: int
+    - timerRunning: boolean
+    - setupUI(): void
+    - keyPressed(event: Event): void
+    - startTimer(): void
+    - calculateStats(): void
+    - endTest(): void
+    - startTest(): void
+    - displayText(): void
+}
+
+class TypingTest {
+    + feedEvent(char: char): void
+}
+
+TypingApp --> TypingTest
+
+@enduml
